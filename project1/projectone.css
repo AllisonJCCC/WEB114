@@ -1,0 +1,38 @@
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color: #90C7E3;
+    background-image: linear-gradient(to bottom, #ebeaf7, #FFFFFF);
+    min-width: 500px;
+    max-width: 2048px;
+    box-shadow: 3px 3px #333333;
+    border: 1px solid #000033;
+    padding: 1em;
+}
+
+h1 {
+    color: 	#1c1c84;
+}
+
+dl {
+    font-family: Georgia, serif, sans-serif;
+}
+
+dt {
+    color: 	#000042;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+}
+
+dd {
+    color: #000068;
+    font: italic lighter;
+    border-style: solid;
+    border-radius: 16px;
+    padding: 1.2em;
+}
+
+dd:hover {
+    background-color: #c4c3d0;
+}

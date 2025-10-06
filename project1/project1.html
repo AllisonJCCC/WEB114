@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<!--Allison Hanna 10/13/2023-->
+
+<html lang="en">
+    <head>
+        <title>Project 01</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css" type="text/css"> <!--external-->
+        <style></style>
+      </head>
+    
+    <body>
+      <div id="wrapper">
+        <h1> QUESTIONS </h1>
+        
+        <h2> 01. What is the purpose of JavaScript? </h2>
+          <p> The purpose of JavaScript is to make web pages interactive. It is a scripting language that allows developers to create dynamically updating content, control multimedia, animate images, and pretty much everything else. </p>
+          <p> JavaScript is used to add interactivity to web pages in a variety of ways, such as:
+            <ul> 
+            <li> Validating form input </li>
+            <li> Creating dynamic menus and drop-downs </li>
+            <li> Adding animations and transitions </li>
+            </ul>
+          </p>
+        <br>
+        <h2> 02. Who invented JavaScript and when? </h2>
+          <p> JavaScript was invented by Brendan Eich in 1995. </p>
+        <br>
+        <h2> 03. What software program will you be using to write JavaScript? </h2>
+          <p> I will be using Visual Studio Code to write JavaScript. </p>
+        <br>
+        <h2> 04. What software program will you be using to run JavaScript? </h2>
+          <p> I wil be using a Chrome web browser to run it. </p>
+        <br>
+        <h2> 05. Why are external scripts preferable to scripts added directly within an HTML file? </h2>
+          <p> External scripts are preferable because they can be reused across multiple HTML pages. This can save time and effort. External scripts also keep your HTML code clean and organized. </p>
+        
+      </div>
+
+      <script>
+        "use strict";
+
+        alert("Hi World!");
+        console.log('Hi Allison!');
+
+       
+        
+        const myName = 'Allison';
+        let mySalary = 100000;
+        console.log("My name is " + myName + " and my salary is " + mySalary);
+        mySalary = 150000;
+        console.log("My name is " + myName + " and my new salary is " + mySalary);
+
+        let veteran = false;
+        
+        console.log(typeof(myName));
+        console.log(typeof(mySalary));
+        console.log(typeof(veteran));
+
+        
+        console.log("" + 1 + 0); 
+        console.log("" - 1 + 0);
+        console.log(true + false);
+        console.log(6 / "3");
+        console.log("2" * "3");
+        console.log(4 + 5 + "px");
+        console.log("$" + 4 + 5);
+        console.log("4" - 2);
+        console.log("4px" - 2);
+        console.log(7 / 0);
+        console.log("  -9  " + 5);
+        console.log("  -9  " - 5);
+        console.log(null + 1);
+        console.log(undefined + 1);
+
+        let x = 5;
+        x = x * 2;
+        let y = x + 1; 
+
+        //let y = 1 + (x *=2); this is BAD FORM. It's confusing and poor programming.
+
+
+        console.log(x); //X was calculated by multiplying 5 by 2
+        console.log(y); //Y was calculated by adding 1 to 10
+
+      </script>
+    
+    </body>
+
+
+</html>

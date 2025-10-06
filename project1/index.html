@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--Allison Hanna 1/03/24-->
+    <head> 
+        <title> Beginner Javascript Information</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles1.css">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h3>What is the purpose of JavaScript?</h3>
+        <p>JavaScript is used to interact with content on websites as well as the user.</p>
+        <ul>
+            <li> 1. JavaScript can modify HTML and CSS.</li>
+            <li> 2. JavaScript can react to user actions such as mouse clicks, pointer movements, and key presses.</li>
+            <li> 3. JavaScript can send information to servers or download/upload files.
+            </li>
+        </ul> 
+        <br>
+        <h3>Who invented JavaScript and when?</h3>
+        <p>Brendan Eich in 1995</p>
+        <h3>What software program will you be using to write JavaScript?</h3>
+        <p>We will be using a code editor. <br>
+           Some options are Visual Studio Code (cross-platform, free) and WebStorm (cross-platform, paid). <br>
+           I will be using Visual Studio Code. 
+        </p>
+        <h3>What software program will you be using to run JavaScript?</h3>
+        <p>JavaScript can run on any device with a program called the JavaScript engine.<br>
+           We will be using a compiler, more specifically a browser such as chrome or Firefox.
+        </p>
+        <h3>Why are external scripts preferable to scripts added directly within an HTML file?</h3>
+        <p>Simply scripts are put into HTMl while more complex are in separate files. <br>
+           When scripts are put into separate files, the browser will download and save it.<br>
+           This allows websites to load quicker.
+        </p>
+        <h3>What's the point of all of those console.log() statements?</h3>
+        <p>Coders use this as a tool to help debug. It will not be seen on the browser.</p>
+        <h3>What's the difference between how you reference a variable versus a string in a JavaScript statement?</h3>
+        <p>When referencing a variable as a string quotes are required. 
+           Coders can use double quotes, single quotes, or backticks.
+        </p>
+        <ul>
+            <li> 1.	Double quotes: "Hi World!"</li>
+            <li> 2. Single quotes: 'Hi World!'</li>
+            <li> 3. Backticks: `Hi World!`</li>
+        </ul>
+        <br>
+        <h3>What's the difference between a single value and an expression in a JavaScript statement?</h3>
+        <p> A single value (literal value) is data that represents itself. <br>
+            Single values can be numbers, strings, Booleans, null, and undefined. <br>
+            An expression is a combination of one or more values, variables, operators, and function calls that produces a resulting value.
+        </p>
+        <script>
+            "use strict";
+            alert("Hi World!");// added a script to alert "Hi World!" as requested
+            console.log("Hi Katie"); // added a statement to console.log("Hi Insert Your Name"); 
+        </script>
+        <script>
+            "use strict";
+            const myName = "Katie";
+            let mySalary = 1000000000000000000000000000000000000000000000000000000000000000000;
+            console.log("My name is " + myName + " and my salary is " + mySalary);
+            mySalary = 150000;
+            console.log("My name is " + myName + " and my new salary is " + mySalary);
+            let veteran = false; 
+            console.log(typeof(myName));
+            console.log(typeof(mySalary));
+            console.log(typeof(veteran));
+            console.log(' ' + 1 + 0 );
+            console.log(' ' - 1 + 0 );
+            console.log(true + false );
+            console.log('This statement did math since a number is first: ' + 6 / "3" );
+            console.log('This statement did not do math since a string is first: ' +  "2" * "3" );
+            console.log('This statement did not do math since a string is first: ' + 4 + 5 + "px" );
+            console.log('This concatenates the dollar sign to the numbers ' + '$' + 4 + 5 );
+            console.log( '4' - 2 );
+            console.log('This gives an NaN since there is text with the minus sign ' + '4px' - 2 );
+            console.log(7 / 0 );
+            console.log('This does not do math since the 9 is text. ' + '  -9 '  + 5 );
+            console.log("  -9  " - 5 );
+            console.log(null + 1 );
+            console.log(undefined + 1);
+            let x = 5; //
+            let y = 1 + (x *= 2); 
+            /*
+            Let's break down the expression let y = 1 + (x *= 2); step by step:
+
+            x is initially 5.
+            x *= 2 is equivalent to x = x * 2, so x is multiplied by 2, making x equal to 10.
+            1 + (x *= 2) is 1 + 10, which equals 11.
+            The value 11 is assigned to the variable y.
+            After this code executes, x will be 10 and y will be 11.
+            */
+
+            console.log(x); // x is assigned to 10 because x was reassigned using the short hand  x = 5 * 2
+            console.log(y); // y is assigned to 11 because 10 + 1 = 11
+        
+        </script>
+    
+    </body>
+    
+    </html>
+    
