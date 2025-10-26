@@ -1,62 +1,59 @@
-      <!DOCTYPE html>
-      <meta lang = "en">
-
-      <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css" type="text/css"> <!--external-->
-
-      </head>
+<!DOCTYPE html>
+<!--Allison Hanna 11/02/2023-->
+<html lang="en">
+    <head>
+    <title>Project 03 - Allison Hanna</title>
+    <meta charset="utf-8">
+    </head>
     
     <body>
-      <div class="wrapper">
+        <div id="wrapper">
         <h1> Project 3 </h1>
-        <h2> Allison Hanna</h2>
+        <p> Allison Hanna</p>
         <h2>Questions</h2>
-
         <section>
             <ol>
-            <li>Name a situation where you would need to create an "if" statement.  (There are many answers to this question. )</li>
-            <li>When comparing values,  in what data type is the result stored?</li>
+                <li>Name a situation where you would need to create an "if" statement.  (There are many answers to this question. )</li>
+           
+              <ul>
+                <li>Using if statements is essential for validating user input or checking correctivity. For example, if a user tries to enter an invalid name when you're asking for a user's name, then JS will spit out the exact value, and we don't want that.</li>
+              </ul>
+            
+                <li>When comparing values,  in what data type is the result stored?</li>
+        
+                <ul>
+                <li>When comparing values, the data type returned is a boolean value (true or false).</li>
+                </ul>
             </ol>
-         </section>
-
-        <h2>Answers</h2>
-        <section>
-            <ol>
-            <li>Using if statements is essential for validating user input or checking correctivity. For example, if a user tries to enter an invalid name when you're asking for a user's name, then JS will spit out the exact value, and we don't want that.</li>
-            <li>When comparing values, the data type returned is a boolean value (true or false).</li>
-             </ol>
-
         </section>
+        <section>
+            <h3> The exercises occurred first using pop up windows.</h3>
+        </section>
+         </div>
 
-         <h2> Prompt and Confirm windows already happened with exercises.</h2>
-     </div>
-    <script>
+        <script>
       
-    //Allison Hanna -- Project 3 -- if and comparison operators
+        //Allison Hanna -- Project 3 -- if and comparison operators
 
-    // Line 1: Get customer total
-    let total = Number(prompt("How much did you spend?"));
+        // Line 1: Get customer total
+        let total = Number(prompt("How much did you spend?"));
+        
+        // Line 2: Confirm total and save result
+        let confirmed = confirm(`$${total} total? Click OK to continue!`); 
+        
+        if (total >= 100) {
+            alert("20% off");
+        }
 
-    // Line 2: Confirm total and save result
-    let confirmed = confirm (`$${total} total? Click OK to continue!`);
+        else if (total >= 50) {
+            alert("10% off");
+        }
 
-     // Lines 7-9: First discount rule
-    if (total < 50) {
-        alert("No discount");
-    }
+        else  {
+            alert("No discount");
+        }
 
-    // Lines 10-12: Second discount rule  
-    else if (total >= 100) {
-      alert("20% off");
-    }
-    
-    // Lines 13-15: Third discount rule
-   else if (total >= 50) {
-       alert("10% off");
-    }
+        </script>
 
-    </script>
-   
     </body>
-    </html>
- 
+ </html>
