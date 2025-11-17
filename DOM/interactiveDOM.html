@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emoji Confetti!</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
+      background: #f0f8ff;
+      position: relative;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 2rem;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Welcome to the Emoji Party! 🎉</h1>
+  <button id="startButton">Start Confetti</button>
+
+  <script>
+    const startButton = document.getElementById('startButton');
+    const emojis = ["🎉", "🎊", "✨", "🎈", "🌟", "🥳"];
+    let confettiInterval;
+
+    function createEmoji() {
+      const emoji = document.createElement('div');
+      emoji.classList.add('emoji');
+      emoji.style.left = Math.random() * 100 + "vw"; // random left position
+      emoji.style.animationDuration = (Math.random() * 3 + 3) + "s"; // random fall speed
+      emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      document.body.appendChild(emoji);
+
+      // Remove the emoji after it falls
+      setTimeout(() => {
+        emoji.remove();
+      }, 6000);
+    }
+
+    function startConfetti() {
+      // Start the confetti
+      if (!confettiInterval) {
+        confettiInterval = setInterval(createEmoji, 300); // create a new emoji every 300ms
+        startButton.innerText = "Stop Confetti";
+      } else {
+        // Stop the confetti
+        clearInterval(confettiInterval);
+        confettiInterval = null;
+        startButton.innerText = "Start Confetti";
+      }
+    }
+
+    startButton.addEventListener('click', startConfetti);
+  </script>
+</body>
+</html>

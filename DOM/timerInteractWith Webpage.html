@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Clock</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #countdownDisplay {
+            font-size: 5em;
+            color: #333;
+            padding: 20px;
+            border: 4px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #e3f2fd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        #countdownDisplay:hover {
+            background-color: #d1e8f9;
+            border-color: #388E3C;
+        }
+
+        #message {
+            font-size: 2em;
+            color: #333;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdownDisplay">Click to Start</div>
+    <br>
+    <div id="message"></div>
+
+    <script>
+        let countdownInterval;
+        let timeRemaining = 10;
+        const countdownDisplay = document.getElementById('countdownDisplay');
+        const messageElement = document.getElementById('message');
+        const sound = new Audio('timesup.mp3'); // Load the sound file
+
+        function updateDisplay(time) {
+            countdownDisplay.textContent = time > 0 ? time : "Time's up!";
+        }
+
+        function startCountdown() {
+            if (countdownInterval) {
+                clearInterval(countdownInterval);
+            }
+
+            timeRemaining = 10;
+            updateDisplay(timeRemaining);
+            messageElement.textContent = ''; // Clear any previous message
+
+            countdownInterval = setInterval(() => {
+                timeRemaining--;
+                updateDisplay(timeRemaining);
+
+                if (timeRemaining <= 0) {
+                    clearInterval(countdownInterval);
+                    sound.play(); // Play the sound
+                    messageElement.textContent = "Countdown Finished!";
+                }
+            }, 1000);
+        }
+
+        countdownDisplay.addEventListener('click', startCountdown);
+    </script>
+</body>
+</html>
