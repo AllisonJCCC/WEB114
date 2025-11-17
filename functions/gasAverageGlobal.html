@@ -1,0 +1,67 @@
+
+<!---Allison Hanna 11/10/2025-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gas Average Calculator</title>
+</head>
+<body>
+  <h1>Calculate Average Weekly Gas</h1>
+
+  <section>
+    <h2>Questions and Answers</h2>
+    <p><strong>What is the purpose of a function?</strong></p>
+    <p><em>A function is a reusable block of code that allows you to group related instructions together. Once defined, you can execute those instructions simply by calling the function’s name. This makes your code more organized, efficient, and easier to maintain.</em></p>
+  </section>
+
+  <!-- JavaScript Section -->
+  <script>
+    //Initialize variables count and total
+    let entryCount = 0;
+    let total = 0;
+
+    // Step 1: Ask for user's name
+    let userName = prompt("Please enter your first name: ").toLowerCase();
+
+    // Step 2: Ask for first weekly gas total
+    let weeklyGas = parseFloat(prompt("Please enter your first weekly gas total: or enter -1 to end"));
+  
+    // Step 3: Create function to calculate the average
+    function calcGasAvg() {
+      // 3a. While the weekly gas total is not -1:
+      while (weeklyGas !== -1) {
+        // Add the total to running total.
+        total += weeklyGas;
+        // Increase count by 1.
+        entryCount++;
+        // Ask again for another weekly total (-1 to end).
+        weeklyGas = parseFloat(prompt("Enter next week's gas total or enter -1 to end: "));
+      }
+
+      // Step 43b. Return total divided by count.
+      if (entryCount > 0) {
+        return total / entryCount;
+      } else {
+        return 0;
+      }
+    }
+
+    // Step 4: Call calcGasAvg() and assign the result to a variable named gas.
+    let gas = calcGasAvg();
+
+    // Step 5: Use a confirm message to display the user's name and their gas average (2 decimal places).
+    confirm(userName + "'s average weekly gas bill is $" + gas.toFixed(2));
+
+    // Step 6: Use an if statement to tell them how many gas totals they entered.
+    if (entryCount === 0) {
+      confirm("No gas totals were entered.");
+    } else if (entryCount === 1) {
+      confirm(`You entered ${entryCount} gas total.`);
+    } else {
+      confirm(`You entered ${entryCount} gas totals.`);
+    }
+  </script>
+</body>
+</html>
