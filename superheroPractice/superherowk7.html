@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Superhero Theme Switcher</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: all 0.8s ease;
+      min-height: 100vh;
+      margin: 0;
+    }
+    h1 { font-size: 3.5rem; margin: 20px; }
+    .hero-btn {
+      padding: 16px 32px;
+      margin: 12px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+    .hero-btn:hover { transform: scale(1.15); }
+    #quote {
+      margin-top: 60px;
+      font-size: 2.2rem;
+      font-weight: bold;
+      min-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Choose Your Hero!</h1>
+  <p>Click any hero to activate their theme</p>
+
+  <div id="buttons">
+    <button class="hero-btn" data-hero="batman">Batman</button>
+    <button class="hero-btn" data-hero="superman">Superman</button>
+    <button class="hero-btn" data-hero="wonderwoman">Wonder Woman</button>
+    <button class="hero-btn" data-hero="flash">The Flash</button>
+  </div>
+
+  <p id="quote">No hero selected yet…</p>
+
+  <script src="superhero.js"></script>
+</body>
+</html>
