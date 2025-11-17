@@ -5,31 +5,11 @@ const moodDisplay = document.getElementById('moodDisplay');
 
 // Mood configurations
 const moods = {
-  happy: {
-    bg: '#fff3b0',
-    text: '#b84700',
-    message: 'You are glowing with joy!'
-  },
-  calm: {
-    bg: '#a8e6cf',
-    text: '#2d6a4f',
-    message: 'Peaceful and serene.'
-  },
-  excited: {
-    bg: '#ff6b6b',
-    text: '#fff',
-    message: 'Energy levels: MAX!'
-  },
-  chill: {
-    bg: '#4ecdc4',
-    text: '#fff',
-    message: 'Just vibing.'
-  },
-  mysterious: {
-    bg: '#2c3e50',
-    text: '#ecf0f1',
-    message: 'Something’s brewing...'
-  }
+  happy:     { bg: '#ff9800', text: '#3e2723', message: 'Pumpkin spice everything!' },
+  calm:      { bg: '#d7ccc8', text: '#5d4037', message: 'Crisp leaves, warm tea.' },
+  excited:   { bg: '#d32f2f', text: '#ffffff', message: 'Fall is so pretty!' },
+  chill:     { bg: '#d2a81eff', text: '#250e07', message: 'Cozy sweater weather.' },
+  mysterious:{ bg: '#3e2723', text: '#bed0bd', message: 'Fog rolling through the forest.' }
 };
 
 // Add ONE event listener to the entire document (or body)
