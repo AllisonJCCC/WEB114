@@ -7,7 +7,7 @@ const moodDisplay = document.getElementById('moodDisplay');
 const moods = {
   happy:     { bg: '#ff9800', text: '#3e2723', message: 'Pumpkin spice everything!' },
   calm:      { bg: '#d7ccc8', text: '#5d4037', message: 'Crisp leaves, warm tea.' },
-  excited:   { bg: '#d32f2f', text: '#ffffff', message: 'Fall is so pretty!' },
+  excited:   { bg: '#cf5b18ff', text: '#ffffff', message: 'Fall is so pretty!' },
   chill:     { bg: '#d2a81eff', text: '#250e07', message: 'Cozy sweater weather.' },
   mysterious:{ bg: '#3e2723', text: '#bed0bd', message: 'Fog rolling through the forest.' }
 };
