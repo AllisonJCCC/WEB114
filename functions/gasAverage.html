@@ -1,0 +1,57 @@
+<!-- Allison Hanna March 8, 2024 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-114 Functions Project</title>
+  </head>
+  <body>
+    <h2>What is the purpose of a function?</h2>
+    <p>
+      A function is a reusable code block that has a specific purpose in a
+      computer program.
+    </p>
+
+    <script>
+      let username = prompt("Enter your name");
+      let gas = calcGasAvg();   
+      console.log(gas); //testing to see if it works
+
+      confirm(username + "'s average weekly gas bill is " + gas.toFixed(2));
+
+      function calcGasAvg() {
+        let count = 0;
+        let total = 0;
+        let weeklyGas = 0;
+
+        weeklyGas = parseFloat(
+          prompt("Enter your first week's gas total. Enter -1 when you are done.")
+        );
+        //The above tests for the first gas bill. This allows for someone to say -1 for no gas totals.
+
+        while (weeklyGas !== -1) {
+          // This is a pre test. You can have 0 weeklyGass entries
+          total = total + weeklyGas; //Add weeklyGass to total
+          count++; //increment the number of weeklyGass entries
+          weeklyGas = parseFloat(
+            prompt("Enter your weekly gas total. Enter -1 when you are done.")
+          );
+        } //The above line will enter all other weekly gas totals. It will test by going up to beginning of the loop.
+        let averageGas = total / count; // calculate the average gas
+
+        // Testing to see if the values work
+        console.log(count);
+        console.log(total);
+        console.log(averageGas);
+
+        // 3D
+        return averageGas;
+        // Step 4
+        let gas = calcGasAvg();
+
+        confirm(userName + "'s average weekly gas bill is $" + gas.toFixed(2));
+      }
+    </script>
+  </body>
+</html>
