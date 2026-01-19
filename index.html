@@ -1,1 +1,83 @@
-Hi! this is my home page!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB 114 Projects - Allison</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color:#6a7987;
+        }
+
+             /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: #050606;
+            margin-bottom: 2.5rem;
+            font-size: 2.8rem;
+            background-color: #9eadbd;
+        }
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .project-link {
+            display: inline-block;
+            background-color: #103750;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            width: 280px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px #000000
+        }
+
+        .project-link:hover {
+            background-color: #2980b9;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+
+    </style>
+</head>
+<body>
+
+     <!-- Main Content -->
+    <main>
+        <h1>WEB 114 Projects by Allison Hanna</h1>
+
+        <div class="project-list">
+            <a href="#project1" class="project-link">Project 1</a>
+            <a href="#project2" class="project-link">Project 2</a>
+            <a href="#project3" class="project-link">Project 3</a>
+            <a href="#project4" class="project-link">Project 4</a>
+            <a href="#project5" class="project-link">Project 5</a>
+            <a href="#project6" class="project-link">Project 6</a>
+            <a href="#project7" class="project-link">Project 7</a>
+        </div>
+    </main>
+
+</body>
+</html>
