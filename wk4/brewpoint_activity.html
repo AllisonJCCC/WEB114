@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brew Point — Logical Operators Activity</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f4f0; color: #1a1a1a; min-height: 100vh; padding: 2rem 1rem; }
+  .page-wrap { max-width: 760px; margin: 0 auto; }
+  h1, h2, h3 { margin-bottom: 0.5rem; }
+  p { margin-bottom: 1rem; line-height: 1.6; }
+  code { font-family: 'Courier New', monospace; background: #e8e6e0; padding: 2px 4px; border-radius: 4px; }
+  
+  /* Header */
+  .header { background: #fff; border-radius: 14px; padding: 2rem; margin-bottom: 1.5rem; border: 1px solid #e8e6e0; }
+  .header-top { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+  .coffee-icon { width: 48px; height: 48px; background: #1D9E75; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff; }
+  .header-sub { font-size: 14px; color: #888; margin-top: 2px; }
+  .header-meta { display: flex; gap: 16px; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f0ede8; flex-wrap: wrap; }
+  .meta-pill { font-size: 12px; color: #666; background: #f5f4f0; border-radius: 20px; padding: 4px 12px; }
+
+  /* Sections */
+  section { background: #fff; border-radius: 14px; padding: 2rem; border: 1px solid #e8e6e0; margin-bottom: 1.5rem; }
+  .section-badge { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #1D9E75; background: #e8f7f1; border-radius: 20px; padding: 3px 12px; margin-bottom: 12px; }
+  .section-title { font-size: 20px; font-weight: 600; margin-bottom: 6px; }
+  .section-desc { font-size: 14px; color: #666; margin-bottom: 1.5rem; }
+
+  /* Concept box */
+  .concept-box { background: #f8f7f3; border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; border: 1px solid #ebe9e3; }
+  .op-symbol { font-family: 'Courier New', monospace; font-size: 26px; font-weight: 700; color: #185FA5; margin-bottom: 4px; }
+  .op-rule { font-size: 13px; color: #666; margin-bottom: 12px; }
+  .truth-table { display: flex; flex-direction: column; gap: 6px; }
+  .tr-row { display: flex; align-items: center; gap: 8px; font-family: 'Courier New', monospace; font-size: 13px; }
+  .tv { padding: 2px 10px; border-radius: 5px; font-size: 12px; font-weight: 600; }
+  .tv.t { background: #eaf3de; color: #3B6D11; }
+  .tv.f { background: #fceaea; color: #A32D2D; }
+  .arr { color: #999; }
+
+  /* Scenario */
+  .scenario-card { background: #fffdf8; border: 1px solid #ebe9e3; border-left: 4px solid #1D9E75; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+  .sc-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: #999; margin-bottom: 4px; }
+  .sc-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .sc-desc { font-size: 14px; color: #555; line-height: 1.6; }
+
+  /* Code block */
+  .code-block { background: #1e1e2e; border-radius: 10px; padding: 1.25rem 1.5rem; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.9; margin-bottom: 1.5rem; color: #cdd6f4; overflow-x: auto; }
+  .cm { color: #6c7086; } .ck { color: #f4f3f5; } .cv { color: #89dceb; } .cs { color: #a6e3a1; } .cf { color: #fab387; } .cop { color: #89b4fa; }
+
+  /* Questions */
+  .question-block { margin-bottom: 1.25rem; }
+  .question-block label { font-size: 14px; font-weight: 600; display: block; margin-bottom: 6px; color: #1a1a1a; }
+  .question-block textarea { width: 100%; min-height: 72px; padding: 10px 12px; border: 1.5px solid #e0deda; border-radius: 8px; font-family: inherit; font-size: 14px; color: #1a1a1a; background: #fafaf8; resize: vertical; line-height: 1.6; transition: border-color 0.15s; }
+  .question-block textarea:focus { outline: none; border-color: #1D9E75; }
+
+  /* Flip to reveal */
+  details { margin-top: 8px; }
+  summary { cursor: pointer; font-weight: 600; color: #1D9E75; }
+  details[open] { background: #f0faf6; padding: 10px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <div>
+        <h1>Coffee Shop Loyalty with Logical Operators</h1>
+        <div class="header-sub">Coffee shop loyalty app &nbsp;·&nbsp; JavaScript activity</div>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span class="meta-pill">Beginner level</span>
+      <span class="meta-pill">Topics: &&, ||, !</span>
+    </div>
+  </header>
+
+  <!-- SECTION 0: AND -->
+  <section>
+    <span class="section-badge">Part 1 of 4 </span>
+    <h2 class="section-title">Logical AND <code>&&</code></h2>
+    <p class="section-desc">Both conditions must be true. If even one is false, the whole expression is false.</p>
+
+    <div class="concept-box">
+      <div class="op-symbol">&amp;&amp;</div>
+      <div class="op-rule">True only when BOTH sides are true</div>
+      <div class="truth-table">
+        <div class="tr-row"><span class="tv t">true</span><span class="arr">&amp;&amp;</span><span class="tv t">true</span><span class="arr">→</span><span class="tv t">true</span></div>
+        <div class="tr-row"><span class="tv t">true</span><span class="arr">&amp;&amp;</span><span class="tv f">false</span><span class="arr">→</span><span class="tv f">false</span></div>
+        <div class="tr-row"><span class="tv f">false</span><span class="arr">&amp;&amp;</span><span class="tv t">true</span><span class="arr">→</span><span class="tv f">false</span></div>
+        <div class="tr-row"><span class="tv f">false</span><span class="arr">&amp;&amp;</span><span class="tv f">false</span><span class="arr">→</span><span class="tv f">false</span></div>
+      </div>
+    </div>
+
+    <div class="scenario-card">
+      <div class="sc-label">Scenario</div>
+      <div class="sc-title">Free drink redemption</div>
+      <div class="sc-desc">A customer can redeem a free drink only if they are a member AND have at least 50 points.</div>
+    </div>
+
+    <div class="code-block">
+      <p> Download the template.html file from Canvas and copy the code below into a new file called practice.js to practice the && operator</p>
+      <div class="cm">// Brew Point — Free Drink Check </div>
+      <cspan class="ck">
+       <p>// Brew Point — Free Drink Check</p> 
+       <p> let isMember = confirm("Are you a member?");</p>
+       <p> points = parseInt(prompt("How many points do you have?"));</p>
+
+        <p>let canRedeem = isMember && (points >= 50);</p>
+
+        <p>if (canRedeem) {  </p>
+       
+        <p>  alert("Free drink!"); </p>
+        <p> } else {</p>
+        <p>   alert("Not enough points or not a member.");</p>
+        <p> }</p>
+      
+      </code>
+      </div>
+
+    <div class="question-block">
+      <label>Q1 — If isMember = true and points = 30, what does canRedeem equal? Why?</label>
+      <textarea placeholder="Write your answer here..."></textarea>
+      <details>
+        <summary>Check Answer</summary>
+        <p>false — because points is less than 50.</p>
+      </details>
+    </div>
+
+    <div class="question-block">
+      <label>Q2 — If isMember = false and points = 200, what does canRedeem equal? Why?</label>
+      <textarea placeholder="Write your answer here..."></textarea>
+      <details>
+        <summary>Check Answer</summary>
+        <p>false — AND requires both to be true, but isMember is false.</p>
+      </details>
+    </div>
+
+    <div class="question-block">
+      <label>Q3 — What is the minimum combination of inputs that makes canRedeem = true?</label>
+      <textarea placeholder="Write your answer here..."></textarea>
+      <details>
+        <summary>Check Answer</summary>
+        <p>isMember = true AND points ≥ 50.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SECTION 1: OR -->
+  <section>
+    <span class="section-badge">Part 2 of 4 </span>
+    <h2 class="section-title">Logical OR <code>||</code></h2>
+    <p class="section-desc">At least one condition must be true. Only fails when both sides are false.</p>
+
+    <div class="concept-box">
+      <div class="op-symbol">||</div>
+      <div class="op-rule">True when AT LEAST ONE side is true</div>
+      <div class="truth-table">
+        <div class="tr-row"><span class="tv t">true</span><span class="arr">||</span><span class="tv t">true</span><span class="arr">→</span><span class="tv t">true</span></div>
+        <div class="tr-row"><span class="tv t">true</span><span class="arr">||</span><span class="tv f">false</span><span class="arr">→</span><span class="tv t">true</span></div>
+        <div class="tr-row"><span class="tv f">false</span><span class="arr">||</span><span class="tv t">true</span><span class="arr">→</span><span class="tv t">true</span></div>
+        <div class="tr-row"><span class="tv f">false</span><span class="arr">||</span><span class="tv f">false</span><span class="arr">→</span><span class="tv f">false</span></div>
+      </div>
+    </div>
+
+    <div class="scenario-card">
+      <div class="sc-label">Scenario</div>
+      <div class="sc-title">Happy Hour discount</div>
+      <div class="sc-desc">A customer gets 20% off if it is Happy Hour OR if they are a student.</div>
+      <div class="code-block">
+      <div class="cm">// Brew Point — Free Drink Check 
+      <span class="ck">
+       <p>// Copy the code below to your practice.js file to practice the OR operator</p>
+        <p class="comment">// Ask the user two questions</p>
+        <p>let isHappyHour = confirm("Is it Happy Hour (2-4pm)? Click OK for Yes, Cancel for No.");</p>
+        <p>let isStudent = confirm("Is the customer a student? Click OK for Yes, Cancel for No.");</p>
+
+        <p class="comment">// Use the OR operator: discount if either condition is true</p>
+        <p>let getsDiscount = isHappyHour || isStudent;</p>
+
+        <p class="comment">// Explain the logic and show the result</p>
+        <p>if (getsDiscount) {</p>
+        <p>  alert("The customer gets 20% off!");</p>
+        <p>} else {</p>
+        <p>  alert("No discount today.");</p>
+        <p>}</p>
+      </span>
+     </div>
+    </div>
+        
+
+    <div class="question-block">
+      <label>Q4 — If isHappyHour = false and isStudent = false, does the customer get a discount? Why?</label>
+      <textarea placeholder="Write your answer here..."></textarea>
+      <details>
+        <summary>Check Answer</summary>
+        <p>No — both values are false, so the result is false.</p>
+      </details>
+    </div>
+
+    <div class="question-block">
+      <label>Q5 — List two different input combinations that DO give a discount.</label>
+      <textarea placeholder="Write your answer here..."></textarea>
+      <details>
+        <summary>Check Answer</summary>
+        <p>
+          Examples: 
+          <br>• isHappyHour = true, isStudent = false
+          <br>• isHappyHour = false, isStudent = true
+          <br>• (both true also works)
+        </p>
+      </details>
+    </div>
+
+    <div class="question-block">
+      <label>Q6 — How is || different from && in terms of what it takes to get true?</label>
+      <textarea placeholder="Write your answer here..."></textarea>
+      <details>
+        <summary>Check Answer</summary>
+        <p>|| only needs one true value; && requires both to be true.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SECTION 2: NOT -->
+  <section>
+    <span class="section-badge">Part 3 of 4 </span>
+    <h2 class="section-title">Logical NOT <code>!</code></h2>
+    <p class="section-desc">Flips a boolean value. true becomes false, false becomes true.</p>
+
+    <div class="scenario-card">
+      <div class="sc-label">Scenario</div>
+      <div class="sc-title">App maintenance check</div>
+      
+      <div class="sc-desc">The app lets a customer place an order only if the system is NOT under maintenance AND they are logged in.</div>
+      <div class="code-block">
+        <p> Copy this code into your practice.js file to learn about the ! operator</p>
+      <p class="comment">// Ask the user two questions</p>
+      <p class="code">let isMaintenance = confirm("Is the system under maintenance? Click OK for Yes, Cancel for No.");</p>
+      <p class="code">let isLoggedIn = confirm("Is the customer logged in? Click OK for Yes, Cancel for No.");</p>
+
+      <p class="comment">// The customer can order only if the system is NOT under maintenance AND they are logged in</p>
+      <p class="code">let canOrder = !isMaintenance && isLoggedIn;</p>
+
+      <p class="comment">// Explain the logic and show the result</p>
+      <p class="code">if (canOrder) {</p>
+      <p class="code">  alert("The customer can place an order.");</p>
+      <p class="code">} else {</p>
+      <p class="code">  alert("Ordering is not available right now.");</p>
+      <p class="code">}</p>
+     </div>
+     </div>
+
+    <div class="question-block">
+      <label>Q7 — If isMaintenance = true, what does !isMaintenance equal?</label>
+      <textarea placeholder="Write your answer here..."></textarea>
+      <details>
+        <summary>Check Answer</summary>
+        <p>false — NOT flips true to false.</p>
+      </details>
+    </div>
+
+    <div class="question-block">
+      <label>Q8 — If isMaintenance = false and isLoggedIn = false, trace through canOrder step by step. What is the result?</label>
+      <textarea placeholder="Write your answer here..."></textarea>
+      <details>
+        <summary>Check Answer</summary>
+        <p>Step 1: !false → true<br>Step 2: true && false → false<br>Final result: false</p>
+      </details>
+    </div>
+
+    <div class="question-block">
+      <label>Q9 — Why might a programmer use !isMaintenance instead of creating a new variable called isNotMaintenance?</label>
+      <textarea placeholder="Write your answer here..."></textarea>
+      <details>
+        <summary>Check Answer</summary>
+        <p>Using !isMaintenance is shorter and avoids creating an extra variable.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SECTION 3: PREDICT -->
+  <section>
+    <span class="section-badge">Part 4 of 4 </span>
+    <h2 class="section-title">Predict the output</h2>
+      <div class="question-block">
+      <label>Q10 — Predict the output for these scenarios:</label>
+      <div class="question-block">
+    <p>Given this code:</p>
+  <div class="code-block">
+let canGetLateMenu = (isAfter8pm || preOrdered) && !kitchenClosed;
+  </div>
+  <p>Scenarios:</p>
+  <ol>
+    <li>isAfter8pm = true, preOrdered = false, kitchenClosed = false</li>
+    <li>isAfter8pm = false, preOrdered = true, kitchenClosed = false</li>
+    <li>isAfter8pm = false, preOrdered = false, kitchenClosed = false</li>
+    <li>isAfter8pm = false, preOrdered = true, kitchenClosed = true</li>
+  </ol>
+</div>
+      <textarea placeholder="Write your answer here..."></textarea>
+      <details>
+        <summary>Check Answers</summary>
+        <ol>
+          <li>true</li>
+          <li>true</li>
+          <li>false</li>
+          <li>true</li>
+        </ol>
+        <p>Evaluate: ! → && → ||. The parentheses around (isAfter8pm || preOrdered) ensure correct order.</p>
+      </details>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
