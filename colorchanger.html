@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Changer</title>
+   <script src="colorchanger.js" defer> </script>
+    <style>
+      /* Center the content on the page */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Arial, sans-serif;
+  }
+
+/* Box in the middle */
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  padding-left:20px;
+}
+
+/* Button */
+button {
+  align-items: center;
+  width:300px;
+  padding: 20px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  margin-left:100px;
+  background-color: #2c739d;
+  color: white;
+  cursor: pointer;
+}
+
+  </style>
+  </head>
+  <body>
+    <h1 id="title">Click the button below to change the color of the webpage.</h1>
+    <button id="changeColorButton">Change Color</button>
+
+     </body>
+</html>
