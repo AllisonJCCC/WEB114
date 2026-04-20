@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Photo Gallery</title>
+<link rel="stylesheet" href="gallerystyles.css">
+<script src="gallery.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Interactive Photo Gallery</h1>
+</header>
+
+<main>
+  <section aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading">Image Gallery</h2>
+
+    <!-- Semantic figure for image + caption -->
+    <figure>
+      <img id="gallery" src="beach.jpg" alt="A sunny beach">
+      <figcaption id="caption">A sunny beach</figcaption>
+    </figure>
+
+    <!-- Navigation buttons -->
+    <nav class="gallery-nav" aria-label="Photo navigation">
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </nav>
+  </section>
+</main>
+</body>
+</html>

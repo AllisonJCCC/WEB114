@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Photo Gallery</title>
+<link rel="stylesheet" href="gallerystyles.css">
+<script src="galleryjs.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Interactive Photo Gallery</h1>
+</header>
+
+<main>
+  <section aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading">Gallery</h2>
+
+    <!-- Semantic figure for image + caption -->
+    <figure>
+      <img id="gallery" src="beach.jpg" alt="A sunny beach">
+      <figcaption id="caption">A sunny beach</figcaption>
+    </figure>
+
+    <!-- Navigation buttons -->
+    <nav class="gallery-nav" aria-label="Photo navigation">
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </nav>
+  </section>
+
+  <!--extra challenge activity-->
+  <section aria-labelledby="add-photo-heading">
+    <h2 id="add-photo-heading">Add a New Photo</h2>
+    <form id="photoForm">
+      <label for="photoSrc">Photo filename:</label><br>
+      <input type="text" id="photoSrc" placeholder="newphoto.jpg" required><br>
+
+      <label for="photoAlt">Photo Description:</label><br>
+      <input type="text" id="photoAlt" placeholder="A description of the photo" required><br><br>
+
+      <button type="submit">Add Photo</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>Interactive Gallery Example &copy; 2026</p>
+</footer>
+
+</body>
+</html>

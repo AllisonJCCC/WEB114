@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Person Object Form</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="objects.js" defer> </script>
+</head>
+<body>
+  <header>
+    <h1>My Person Object</h1>
+  </header>
+
+  <main>
+  <!--Display starting info and then updated info once submit is clicked-->
+    <section>
+      <h2> Current Person</h2>
+      <section id="personInfo">
+      <p><strong>Name:</strong></p>
+      <p id="name"></p>
+
+      <p><strong>Age:</strong></p>
+      <p id="age"></p>
+
+      <p><strong>City:</strong></p>
+      <p id="city"></p>
+
+      <p><strong>Favorite Color:</strong></p>
+      <p id="color"></p>
+
+      <p id="message"></p>
+      <p id="greeting"></p>
+        </section>
+    </section>
+
+      <!--Form to let someone enter new person info and then click Submit-->
+    <section class="form">
+      <h2>Enter a New Person</h2>
+      <form id="personForm">
+        <label for="fnameInput">First Name:</label><br>
+        <input type="text" id="fnameInput" required><br>
+
+        <label for="lnameInput">Last Name:</label><br>
+        <input type="text" id="lnameInput" required><br>
+
+        <label for="ageInput">Age:</label><br />
+        <input type="number" id="ageInput" required><br />
+
+        <label for="cityInput">City:</label><br />
+        <input type="text" id="cityInput" required><br />
+
+        <label for="colorInput">Favorite Color:</label><br />
+        <input type="text" id="colorInput" required><br /><br />
+
+        <button type="submit">Update Person</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
