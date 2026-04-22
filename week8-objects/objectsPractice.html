@@ -1,0 +1,53 @@
+<!--Allison Hanna car practice-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Object Form</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="objectsPractice.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>My Car Object</h1>
+  </header>
+
+  <main>
+    <!-- Display current car -->
+    <section>
+      <h2>Current Car</h2>
+      <section id="carInfo">
+        <p><strong>Make & Model:</strong></p>
+        <p id="carName"></p>
+
+        <p><strong>Year:</strong></p>
+        <p id="year"></p>
+
+        <p><strong>Color:</strong></p>
+        <p id="color"></p>
+      </section>
+    </section>
+
+    <!-- Form -->
+    <section class="form">
+      <h2>Enter a New Car</h2>
+      <form id="carForm">
+        <label for="makeInput">Make:</label><br>
+        <input type="text" id="makeInput" required><br>
+
+        <label for="modelInput">Model:</label><br>
+        <input type="text" id="modelInput" required><br>
+
+        <label for="yearInput">Year:</label><br>
+        <input type="number" id="yearInput" required><br>
+
+        <label for="colorInput">Color:</label><br>
+        <input type="text" id="colorInput" required><br>
+
+        <button type="submit">Update Car</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
