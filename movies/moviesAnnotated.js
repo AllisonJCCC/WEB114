@@ -4,24 +4,24 @@
 // ==========================
 // 1. DATA (ARRAY OF OBJECTS)
 // ==========================
-
 const movies = [
   {
     src: "dark.webp",
     alt: "A superhero saving the world",
-    title: "Hero Rise"
+    title: "Dark Knight"
   },
   {
     src: "martian.webp",
-    alt: "A funny animated story",
-    title: "Laugh World"
+    alt: "Mark Watney on Mars trying to survive",
+    title: "The Martian"
   },
   {
     src: "project.webp",
     alt: "A journey through space",
-    title: "Galaxy Trip"
+    title: "Galaxy Quest"
   }
 ];
+
 // Stores multiple movie objects in one array
 
 /*
