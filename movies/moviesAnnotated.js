@@ -1,9 +1,12 @@
+//Allison Hanna object movie gallery
+//https://allisonjccc.github.io/WEB114/movies/movies.html
+
 "use strict"
 // Helps catch common JavaScript mistakes
 
-// ==========================
+
 // 1. DATA (ARRAY OF OBJECTS)
-// ==========================
+
 const movies = [
   {
     src: "dark.webp",
@@ -37,11 +40,7 @@ const movies = [
 - Add a 4th movie to the array
 */
 
-
-// ==========================
 // 2. STATE (TRACK POSITION)
-// ==========================
-
 let currentIndex = 0;
 // Keeps track of which movie is currently displayed
 
@@ -57,15 +56,12 @@ let currentIndex = 0;
   currentIndex = Math.floor(Math.random() * movies.length);
 */
 
-
-// ==========================
 // 3. SELECT DOM ELEMENTS
-// ==========================
-
 const imgElement = document.querySelector("#gallery");
 const captionElement = document.querySelector("#caption");
 const headingElement = document.querySelector("#gallery-heading");
 
+//Previous and Next buttons
 const nextButton = document.querySelector("#next");
 const prevButton = document.querySelector("#prev");
 
@@ -85,25 +81,26 @@ const prevButton = document.querySelector("#prev");
 */
 
 
-// ==========================
+
 // 4. DISPLAY FUNCTION
-// ==========================
+
 
 function showMovie(index) {
   const movie = movies[index]; 
-  // Get one movie object
+// Get the movie object at the current index from the movies array
 
   imgElement.src = movie.src; 
-  // Update image
+// Set the image source (file path) to the movie's src property
 
   imgElement.alt = movie.alt; 
-  // Update alt text
+// Set the alt text of the image (for accessibility and description)
 
   captionElement.textContent = movie.alt; 
   // Show description
 
   headingElement.textContent = `Movie ${index + 1} of ${movies.length}`;
-  // Show position
+// Show which movie we are on (add 1 because index starts at 0)
+// Also show the total number of movies using movies.length
 }
 
 /*
@@ -123,9 +120,9 @@ function showMovie(index) {
 */
 
 
-// ==========================
+
 // 5. INITIAL DISPLAY
-// ==========================
+
 
 showMovie(currentIndex);
 // Show first movie on load
@@ -138,9 +135,8 @@ showMovie(currentIndex);
 - Nothing shows → confusion
 */
 
-// ==========================
+
 // 6. NEXT BUTTON FUNCTION
-// ==========================
 
 function handleNextClick() {
   currentIndex++; 
@@ -169,10 +165,8 @@ function handleNextClick() {
 */
 
 
-// ==========================
-// 7. PREVIOUS BUTTON FUNCTION
-// ==========================
 
+// 7. PREVIOUS BUTTON FUNCTION
 function handlePrevClick() {
   currentIndex--; 
   // Move backward
@@ -195,10 +189,8 @@ function handlePrevClick() {
 */
 
 
-// ==========================
-// 8. EVENT LISTENERS
-// ==========================
 
+// 8. EVENT LISTENERS
 nextButton.addEventListener("click", handleNextClick);
 prevButton.addEventListener("click", handlePrevClick);
 
@@ -219,9 +211,7 @@ prevButton.addEventListener("click", handlePrevClick);
 */
 
 
-// ==========================
 // 🌟 BONUS EXTENSION (ADVANCED)
-// ==========================
 
 /*
 🚀 SLIDESHOW MODE:
