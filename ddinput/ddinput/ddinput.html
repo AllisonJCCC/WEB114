@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RPG Character Creator</title>
+  <link rel="stylesheet" href="ddinput.css">
+  <script src="ddinput.js" defer ></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1> RPG Character Creator</h1>
+
+    <!-- 
+         CHARACTER CREATOR
+     -->
+    <div class="creator">
+
+      <input id="nameInput" placeholder="Enter character name">
+
+      <select id="classSelect">
+        <option value="Fighter">Fighter</option>
+        <option value="Wizard">Wizard</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Ranger">Ranger</option>
+      </select>
+
+      <select id="raceSelect">
+        <option value="Human">Human</option>
+        <option value="Elf">Elf</option>
+        <option value="Dwarf">Dwarf</option>
+        <option value="Halfling">Halfling</option>
+        <option value="Tiefling">Tiefling</option>
+      </select>
+
+      <button id="generateBtn">Create Character</button>
+      <button id="saveBtn">Save Character</button>
+
+    </div>
+
+    <!-- 
+         CHARACTER CARD
+     -->
+    <div class="card">
+
+      <h2 id="name">Name: -</h2>
+
+      <!-- Portrait (background image version) -->
+      <div id="characterImage" class="portrait"></div>
+
+      <div class="row">
+        <p id="class">Class: -</p>
+        <p id="race">Race: -</p>
+      </div>
+
+      <hr>
+
+      <div class="stats">
+
+        <div class="stat">
+          <span> STR</span>
+          <p id="strength">-</p>
+        </div>
+
+        <div class="stat">
+          <span> INT</span>
+          <p id="intelligence">-</p>
+        </div>
+
+        <div class="stat">
+          <span></span> DEX</span>
+          <p id="dexterity">-</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 
+         SAVED CHARACTER
+     -->
+    <h3> Saved Character</h3>
+    <p id="saved">None</p>
+
+  </div>
+
+</body>
+</html>
