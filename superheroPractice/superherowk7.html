@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Superhero Theme Switcher</title>
-  <script src="superhero.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>Superhero Theme Switcher</title>
+    <script src="superhero.js" defer></script>
   <style>
     body {
       font-family: 'Comic Sans MS', cursive, sans-serif;
       text-align: center;
       padding: 50px;
-      transition: all 0.8s ease;
+      transition: all 0.6s ease;
       min-height: 100vh;
       margin: 0;
     }
-    h1 { font-size: 3.5rem; margin: 20px; }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px #00004d;
+    }
+    #heroPanel {
+      margin: 30px 0;
+    }
     .hero-btn {
-      padding: 16px 32px;
-      margin: 12px;
-      font-size: 1.4rem;
+      padding: 14px 24px;
+      margin: 8px;
+      font-size: 1.1rem;
       font-weight: bold;
       cursor: pointer;
       border: none;
-      border-radius: 20px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px #000033;
+      transition: transform 0.2s;
     }
-    .hero-btn:hover { transform: scale(1.15); }
-    #quote {
-      margin-top: 60px;
-      font-size: 2.2rem;
+    .hero-btn:hover { transform: translateY(-3px); }
+    #heroMessage {
+      margin-top: 40px;
+      font-size: 1.8rem;
       font-weight: bold;
-      min-height: 100px;
     }
   </style>
 </head>
 <body>
   <h1>Choose Your Hero!</h1>
-  <p>Click any hero to activate their theme</p>
+  <p>Click a hero to activate their theme!</p>
 
   <div id="buttons">
     <button class="hero-btn" data-hero="batman">Batman</button>
@@ -44,7 +51,7 @@
     <button class="hero-btn" data-hero="flash">The Flash</button>
   </div>
 
-  <p id="quote">No hero selected yet…</p>
+  <p id="quote">No hero selected...</p>
 
 
 </body>
